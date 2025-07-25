@@ -10,37 +10,37 @@
     <p>
         <?php
 
-        function sort_2way(&$nums,$order){
-        
-          if($order== true){
-        sort($nums);
-        }else{
-          rsort($nums);
-        }
-      }
-
          $nums = array(15, 4, 18, 23, 10 );
 
-      
-        // 昇順    
-        sort_2way($nums ,TRUE);
+        function sort_2way($nums,$order){
+        
+        if($order=== true){
+        
+        // sort_2way($nums ,TRUE);
+        
         echo "昇順にソートします。<br>";
 
-         
+        sort($nums); 
         foreach($nums as $key => $val){
         echo "{$val} <br>";
         }
-        
-         $nums = array(15, 4, 18, 23, 10 );
 
-      // 降順
-      sort_2way($nums,FALSE);      
-      echo "降順にソートします。<br>";
-
+        }else{
+          
+          // sort_2way($nums,FALSE);      
+          
+          echo "降順にソートします。<br>";
+          rsort($nums);
       foreach ($nums as $key => $val) {
-       echo "{$val} <br>";
+          echo "{$val} <br>";
+        }
       }
+    }
+
+      sort_2way($nums ,TRUE);
+      sort_2way($nums ,FALSE);
     
+        
   
         ?>
     </p>
