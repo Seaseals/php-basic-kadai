@@ -25,28 +25,37 @@
         // if($order=== true){でもOK。
         
         echo "昇順にソートします。<br>";
+         // sort・・・配列を昇順にソートする
         sort($nums); 
 
         // foreach文を用いてソート結果を1行ずつ表示する処理
         // $numsからデータを$keyとして1つずつ取り出し、
         // echo文で順番に出力しています。
-        foreach($nums as $key => $val){
-        echo "{$val} <br>";
+            foreach($nums as $key => $val){
+            // foreach($nums as $key){でもOK
+            echo "{$val} <br>";
+            // echo "{$key}<br>";でもOK
         }
 
         }else{
                     
           echo "降順にソートします。<br>";
+           // rsort・・・配列を昇順にソートする
           rsort($nums);
           // foreach文を用いてソート結果を1行ずつ表示する処理
           // $numsからデータを$keyとして1つずつ取り出し、
           // echo文で順番に出力しています。
-          foreach ($nums as $key => $val) {
-          echo "{$val} <br>";
+              foreach ($nums as $key => $val) {
+              //foreach($nums as $key){でもOK
+              echo "{$val} <br>";
+              // echo "{$key}<br>";でもOK
+
         }
       }
     }
 
+    // 1度目の呼び出しはTRUE（昇順）、
+    // 2度目はFALSE（降順）を指定するのが正解です。
     // 昇順にソート
       sort_2way($nums ,TRUE);
     // 降順にソート
